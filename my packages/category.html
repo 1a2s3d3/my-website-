@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Musician.com</title>
+  <link rel="icon" href="excellent.jpg" type="image/jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('Violin.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: 'Chewy', cursive;
+      animation: bgFloat 20s infinite linear;
+      color: #d0f0ff;
+      background-color: #0a1a2f;
+    }
+
+    @keyframes bgFloat {
+      0% { background-position: center top; }
+      50% { background-position: center bottom; }
+      100% { background-position: center top; }
+    }
+
+    .menu {
+      background-color: #113a5c;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu ul li {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .menu ul li a {
+      color: #aee8ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu ul li:hover {
+      background-color: #1e5b82;
+      border-radius: 10px;
+      transform: scale(1.05);
+    }
+
+    .main {
+      background-color: rgba(15, 40, 60, 0.95);
+      width: 90%;
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      animation: fadeInMain 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInMain {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .card {
+      background-color: #102e45;
+      border: 3px dashed #79c2d0;
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 200px;
+      border: 5px solid #5edfff;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #3fb8e6;
+      color: #fff;
+      font-size: 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      animation: wiggle 2s infinite;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #25a2d1;
+      transform: scale(1.1);
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(-1deg); }
+      50% { transform: rotate(1deg); }
+      100% { transform: rotate(-1deg); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 0;
+      }
+
+      .menu ul li {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .head {
+      background-color: #1c3f5d;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 25px;
+      border: 4px dashed #5edfff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeInMain 1.2s ease-in-out;
+    }
+
+    .head h2 {
+      font-size: 32px;
+      color: #aee8ff;
+      text-shadow: 1px 1px #001f3f;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <ul>
+      <li><a href="new website.html">Home</a></li>
+      <li><a href="category.html">Category</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="head">
+      <h2>Choose the musical instrument you will like to learn</h2>
+    </div>
+
+    <div class="grid">
+      <a href="drumpage.html" style="text-decoration: none;">
+        <div class="card">
+          <img src="drums.jpg" alt="Drumset" />
+          <button>🥁 Drumset</button>
+        </div>
+      </a>
+
+      <a href="pianopage.html" style="text-decoration: none;">
+        <div class="card">
+          <img src="download.webp" alt="Piano" />
+          <button>🎹 Piano</button>
+        </div>
+      </a>
+
+      <a href="saxophone.html" style="text-decoration: none;">
+        <div class="card">
+          <img src="saxophone.jpg" alt="Saxophone" />
+          <button>🎷 Saxophone</button>
+        </div>
+      </a>
+
+      <a href="guitar.html" style="text-decoration: none;">
+        <div class="card">
+          <img src="guitar.jpg" alt="guitar" />
+          <button>🎷 guitar</button>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
